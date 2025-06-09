@@ -1,0 +1,9 @@
+Jalankan command dibawah
+* jalankan command 'php artisan migrate'
+* jalankan command 'php artisan storage:link'
+* buka di browser http://localhost:8000/
+
+
+'http://localhost:8000/login'untuk mengakses admin panel
+Email       : admin@mail.com
+Password    : admin123

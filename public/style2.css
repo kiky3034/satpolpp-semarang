@@ -1,0 +1,137 @@
+  /* === NAVBAR === */
+nav {
+  position: fixed;
+  top: 1.25rem;
+  left: 2.5%;
+  right: 2.5%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Changed to center */
+  border: 0.125rem solid #ffffff;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center all content */
+  width: 100%;
+  gap: 2rem; /* Added gap between logo and menu */
+}
+
+.logo {
+  width: 4rem;
+  height: 3.4rem;
+  background-image: url('/images/logo.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; /* Center menu items */
+}
+  
+  .menu-item {
+    position: relative;
+  }
+  
+  .menu-item > a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+    position: relative;
+    font-weight: bold;
+  }
+  
+  nav.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 0.125rem solid #e0e0e0;
+    box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1);
+  }
+  
+  nav.scrolled .menu-item > a {
+    color: black;
+  }
+
+  
+  nav.scrolled .menu-item > a:hover {
+    color: red;
+  }
+  
+  .menu-item > a:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .menu-item > a:hover {
+    color: red;
+  }
+  
+  .menu-item.dropdown > a::after {
+    content: ' ⮟';
+    font-size: 0.75rem;
+  }
+
+
+  
+  .dropdown-content,
+  .dropdown-content ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 0.1rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+    min-width: 12rem;
+    width: max-content;
+    z-index: 100;
+    font-size: 0.85rem;
+    border: 0.05rem solid red;
+  }
+  
+  .dropdown-content li {
+    position: relative;
+  }
+  
+  .dropdown-content li.dropdown > a::after {
+    content: ' ⮞';
+    float: right;
+    font-size: 0.75rem;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: red;
+    color: white;
+  }
+  
+  .menu-item:hover > .dropdown-content,
+  .dropdown-content li:hover > ul {
+    display: block;
+  }
+  
+  .dropdown-content ul {
+    top: 0;
+    left: 100%;
+  }
